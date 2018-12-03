@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Dismes/SDC8_Server#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",

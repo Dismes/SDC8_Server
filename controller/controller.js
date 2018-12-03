@@ -27,38 +27,19 @@ module.exports = function (app) {
 
     })
 
-    app.get("/pole", function(req,res){
-        res.render('pole',{
-            title: 'Vote!',
-            thing: 'jfdskalfjsalkf'
-        })
+    app.get("/test", function (req, res) {
+        alert('reee');
     })
 
-    app.get("/d20roller", function (req, res) {
-        res.render("d20statroller", {
-            title: 'd20roller'
-        });
-    })
 
-   
-    app.get("/dashboard", function (req, res) {
-        res.render("dashboard", {
-            title: "no"
-        })
-    })
+
 
     app.get("/", function (req, res) {
         //res.sendFile(__dirname + '/html/login.html');
-        res.render("dashboard", {title: "no"});
+        res.render("dashboard", {title: "SDconcentr8s"});
     })
 
-    app.get('/auth', (req, res) => {
-        res.render('auth');
-    })
-
-    app.get('/pole/:title/:options/:multi', (req,res) =>{
-        var str = options.split("-");
-
-        
+    app.get('/sendmail/:First/:Last/:Email/:Subject/:Message', (req,res) =>{
+        var str = options.split("-"); 
     })
 }
