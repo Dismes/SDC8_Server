@@ -1,5 +1,7 @@
+config = require('../../../Private/config.js')
+
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey('');
+sgMail.setApiKey(config.apikey);
 const msg = {
   to: 'yuhki.n@gmail.com',
   from: 'test@example.com',
@@ -7,9 +9,15 @@ const msg = {
   text: 'and easy to do anywhere, even with Node.js',
   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
 };
-sgMail.send(msg);
+
 
 function test(){
 console.log('hello')
+console.log(config.apikey)
+sgMail.send(msg).then((res) =>{
+    console.log (res);
+});
 }
-test();
+//test();
+
+module.exports = sgMail;

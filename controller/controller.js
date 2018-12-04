@@ -1,6 +1,8 @@
 
 module.exports = function (app) {
 
+var Email = require('../public/assets/Js/Email.js')
+
     app.get('/dashboard/calendar/:title/:description/:where/:whenStart/:whenEnd/:start/:end', function (req, res) {
         let parms = {
             'summary': req.params.title,
@@ -24,6 +26,40 @@ module.exports = function (app) {
                 title: "no"
             })
         });
+
+    })
+
+    app.get('/SendEmail/:FirstName/:LastName/:Email/:Subject/:Message', function(req, res){
+        let params = {
+            'FirstName' : req.params.FirstName,
+            'LastName' : req.params.LastName,
+            'Email' : req.params.Email,
+            'Subject' : req.params.Subject,
+            'Message' : req.params.Message
+        }
+
+        const msg = {
+            to: 'yuhki.n@gmail.com',
+            from: params.Email,
+            subject: params.Subject,
+            text: params.FirstName + " " + params.LastName + " asks " + params.Message,
+            html: params.FirstName + " " + params.LastName + " <br><br> " + params.Message
+          };
+          config = require('../Private/config.js');
+
+          Email.setApiKey(config.apikey);
+
+          console.log(Email)
+          console.log(msg)
+
+          Email.send(msg).then((res) =>{
+          
+             
+              return;
+          });
+
+        
+
 
     })
 

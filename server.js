@@ -11,6 +11,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 
+
+
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
@@ -20,7 +22,10 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 
+
 require("./controller/controller.js")(app)
+
+
 
 
 app.listen(port, function () {
