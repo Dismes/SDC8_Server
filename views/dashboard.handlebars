@@ -5,21 +5,30 @@
         <div class="text-block row" id="TextAboveLogo">
             <h2>San Diego Concentr8s</h2>
         </div>
-        <div class='row' style="padding-bottom: 10px; margin-bottom: 10px">
-            <img src="./assets/images/MainLogo.png" width="384" height="216" class='img-fluid imagecontainer' id='MainImage'>
-        </div>
+        <!--<div class='row' style="padding-bottom: 10px; margin-bottom: 10px">
+           <img src="./assets/images/Yuki_logo_design.png" width="384" height="216" class='img-fluid imagecontainer' id='MainImage'> 
+        </div> -->
 
 
     </div>
 
-    <div class='container-fluid' style="padding-bottom: 10px">
-        <div class='row'>
+    <div class='container' style="padding-bottom: 10px">
 
-            <div class='col-sm-2'>
+        <div class='row'>
+            <div class='col-sm-1'>
 
             </div>
+            <div class='col-sm-5'>
+                <h1>Are Keystones safe?</h1>
+                <a href="https://www.webmd.com/diet/ss/slideshow-ketogenic-diet" target="_blank">
+                    <h2> WebDms </h2>
+                </a>
+                <a href="https://www.healthline.com/nutrition/ketogenic-diet-101" target="_blank">
+                    <h2> HealthLine </h2>
+                </a>
+            </div>
 
-            <div class='col-sm-4'>
+            <div class='col-sm-5'>
                 <div class='row'>
                     <h1>Have a Question?<br>
                         Send Us a Email</h1>
@@ -28,20 +37,34 @@
                 <div class='row'>
                     <h2>Don't Hesitate to<br>
                         contact me with any questions</h2>
-                        <br>
-                        <h4>We will get back to you ASAP</h4>
+                    <br>
+                    <h4>We will get back to you ASAP</h4>
                 </div>
 
             </div>
 
 
-            <div class='col-sm-5 col-md-5' id='Contact'>
-                <div class='row'>
-                    <h1>Contact me!</h1>
+            <div class='col-sm-1' id='Contact'>
+            </div>
+
+        </div>
+    </div>
+    <div><button type="button" class="btn btn-primary" style="position:fixed;right: 5%;" data-toggle="modal"
+            data-target="#ContactModal">Contact Me!</button>
+    </div>
+
+
+    <div class="modal fade" id="ContactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact me!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
-
-                <form>
+                <div class="modal-body">
                     <div class="form-group">
                         <label for="FirstName">First Name</label>
                         <input type="FirstName" class="form-control" id="FirstName" placeholder="First Name">
@@ -52,7 +75,8 @@
                     </div>
                     <div class="form-group">
                         <label for="Email">Email address</label>
-                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="Email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="Subject">Subject</label>
@@ -62,11 +86,16 @@
                     <div class="input-group">
                         <textarea class="form-control" id="Message" aria-label="With textarea"></textarea>
                     </div><label for=""></label>
-                    <div class="input-group">
-                        <a type='button' id='ContactButton' href='#' class="btn btn-primary">Submit</a>
-                    </div>
-                </form>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
             </div>
+
         </div>
     </div>
+</div>
+</div>
 </div>
